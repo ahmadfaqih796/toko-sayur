@@ -82,7 +82,7 @@ if (!empty($_SESSION['admin'])) {
         $data[] = $tgl;
         $data[] = $id;
         $sql = 'UPDATE barang SET id_kategori=?, nama_barang=?, merk=?, 
-				harga_beli=?, harga_jual=?, satuan_barang=?, stok=?, tgl_update=?  WHERE id_barang=?';
+				harga_beli=?, harga_jual=?, id_satuan=?, stok=?, tgl_update=?  WHERE id_barang=?';
         $row = $config->prepare($sql);
         $row->execute($data);
         echo '<script>window.location="../../index.php?page=barang/edit&barang=' . $id . '&success=edit-data"</script>';
