@@ -4,14 +4,25 @@ session_start();
 if (!empty($_SESSION['admin'])) {
     require '../../config.php';
     if (!empty($_GET['kategori'])) {
-        $nama= htmlentities(htmlentities($_POST['kategori']));
-        $tgl= date("j F Y, G:i");
+        $nama = htmlentities(htmlentities($_POST['kategori']));
+        $tgl = date("j F Y, G:i");
         $data[] = $nama;
         $data[] = $tgl;
         $sql = 'INSERT INTO kategori (nama_kategori,tgl_input) VALUES(?,?)';
-        $row = $config -> prepare($sql);
-        $row -> execute($data);
+        $row = $config->prepare($sql);
+        $row->execute($data);
         echo '<script>window.location="../../index.php?page=kategori&&success=tambah-data"</script>';
+    }
+
+    if (!empty($_GET['satuan'])) {
+        $nama = htmlentities(htmlentities($_POST['satuan']));
+        $tgl = date("j F Y, G:i");
+        $data[] = $nama;
+        $data[] = $tgl;
+        $sql = 'INSERT INTO satuan (nama_satuan,tgl_input) VALUES(?,?)';
+        $row = $config->prepare($sql);
+        $row->execute($data);
+        echo '<script>window.location="../../index.php?page=satuan&&success=tambah-data"</script>';
     }
 
     if (!empty($_GET['barang'])) {
@@ -36,11 +47,11 @@ if (!empty($_SESSION['admin'])) {
         $data[] = $tgl;
         $sql = 'INSERT INTO barang (id_barang,id_kategori,nama_barang,merk,harga_beli,harga_jual,satuan_barang,stok,tgl_input) 
 			    VALUES (?,?,?,?,?,?,?,?,?) ';
-        $row = $config -> prepare($sql);
-        $row -> execute($data);
+        $row = $config->prepare($sql);
+        $row->execute($data);
         echo '<script>window.location="../../index.php?page=barang&success=tambah-data"</script>';
     }
-    
+
     if (!empty($_GET['jual'])) {
         $id = $_GET['id'];
 
@@ -63,8 +74,8 @@ if (!empty($_SESSION['admin'])) {
             $data1[] = $tgl;
 
             $sql1 = 'INSERT INTO penjualan (id_barang,id_member,jumlah,total,tanggal_input) VALUES (?,?,?,?,?)';
-            $row1 = $config -> prepare($sql1);
-            $row1 -> execute($data1);
+            $row1 = $config->prepare($sql1);
+            $row1->execute($data1);
 
             echo '<script>window.location="../../index.php?page=jual&success=tambah-data"</script>';
         } else {
