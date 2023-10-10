@@ -49,7 +49,6 @@
                             <th>ID Barang</th>
                             <th>Kategori</th>
                             <th>Nama Barang</th>
-                            <th>Merk</th>
                             <th>Stok</th>
                             <th>Harga Beli</th>
                             <th>Harga Jual</th>
@@ -75,7 +74,6 @@
                                 <td><?php echo $isi['id_barang']; ?></td>
                                 <td><?php echo $isi['nama_kategori']; ?></td>
                                 <td><?php echo $isi['nama_barang']; ?></td>
-                                <td><?php echo $isi['merk']; ?></td>
                                 <td>
                                     <?php if ($isi['stok'] == '0') { ?>
                                         <button class="btn btn-danger"> Habis</button>
@@ -85,7 +83,7 @@
                                 </td>
                                 <td>Rp.<?php echo number_format($isi['harga_beli']); ?>,-</td>
                                 <td>Rp.<?php echo number_format($isi['harga_jual']); ?>,-</td>
-                                <td> <?php echo $isi['satuan_barang']; ?></td>
+                                <td> <?php echo $isi['nama_satuan']; ?></td>
                                 <td>
                                     <?php if ($isi['stok'] <=  '3') { ?>
                                         <form method="POST" action="fungsi/edit/edit.php?stok=edit">
@@ -163,10 +161,10 @@
                                     <td>Nama Barang</td>
                                     <td><input type="text" placeholder="Nama Barang" required class="form-control" name="nama"></td>
                                 </tr>
-                                <tr>
+                                <!-- <tr>
                                     <td>Merk Barang</td>
                                     <td><input type="text" placeholder="Merk Barang" required class="form-control" name="merk"></td>
-                                </tr>
+                                </tr> -->
                                 <tr>
                                     <td>Harga Beli</td>
                                     <td><input type="number" placeholder="Harga beli" required class="form-control" name="beli"></td>
@@ -177,10 +175,20 @@
                                 </tr>
                                 <tr>
                                     <td>Satuan Barang</td>
-                                    <td>
+                                    <!-- <td>
                                         <select name="satuan" class="form-control" required>
                                             <option value="#">Pilih Satuan</option>
                                             <option value="PCS">PCS</option>
+                                        </select>
+                                    </td> -->
+                                    <td>
+                                        <select name="satuan" class="form-control" required>
+                                            <option value="#">Pilih Satuan</option>
+                                            <?php $kat = $lihat->satuan();
+                                            foreach ($kat as $isi) {     ?>
+                                                <option value="<?php echo $isi['id_satuan']; ?>">
+                                                    <?php echo $isi['nama_satuan']; ?></option>
+                                            <?php } ?>
                                         </select>
                                     </td>
                                 </tr>

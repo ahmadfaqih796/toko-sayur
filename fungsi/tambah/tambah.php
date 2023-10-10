@@ -45,7 +45,7 @@ if (!empty($_SESSION['admin'])) {
         $data[] = $satuan;
         $data[] = $stok;
         $data[] = $tgl;
-        $sql = 'INSERT INTO barang (id_barang,id_kategori,nama_barang,merk,harga_beli,harga_jual,satuan_barang,stok,tgl_input) 
+        $sql = 'INSERT INTO barang (id_barang,id_kategori,nama_barang,merk,harga_beli,harga_jual,id_satuan,stok,tgl_input) 
 			    VALUES (?,?,?,?,?,?,?,?,?) ';
         $row = $config->prepare($sql);
         $row->execute($data);
