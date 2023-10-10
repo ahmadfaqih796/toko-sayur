@@ -22,14 +22,18 @@ if (!empty($_GET['uid'])) {
    $row->execute(array($_GET['uid']));
    $edit = $row->fetch();
 ?>
-   <form method="POST" action="fungsi/edit/edit.php?kategori=edit">
+   <form method="POST" action="fungsi/edit/edit.php?satuan=edit">
       <table>
          <tr>
-            <td style="width:25pc;"><input type="text" class="form-control" value="<?= $edit['nama_satuan']; ?>" required name="kategori" placeholder="Masukan Kategori Barang Baru">
+            <td style="width:25pc;"><input type="text" class="form-control" value="<?= $edit['nama_satuan']; ?>" required name="satuan" placeholder="Masukan Satuan Barang Baru">
                <input type="hidden" name="id" value="<?= $edit['id_satuan']; ?>">
             </td>
             <td style="padding-left:10px;"><button id="tombol-simpan" class="btn btn-primary"><i class="fa fa-edit"></i>
                   Ubah Data</button></td>
+            <td style="padding-left:10px;">
+               <a href="index.php?page=satuan" class="btn btn-danger btn-md">
+                  Kembali</a>
+            </td>
          </tr>
       </table>
    </form>
