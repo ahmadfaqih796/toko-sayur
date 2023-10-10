@@ -24,7 +24,7 @@ if ($r > 0) {
    <!--STATUS cardS -->
    <div class="col-md-3 mb-3">
       <div class="card">
-         <div class="card-header bg-primary text-white">
+         <div class="card-header bg-success text-white">
             <h6 class="pt-2"><i class="fas fa-cubes"></i> Nama Barang</h6>
          </div>
          <div class="card-body">
@@ -42,7 +42,7 @@ if ($r > 0) {
    <!-- STATUS cardS -->
    <div class="col-md-3 mb-3">
       <div class="card">
-         <div class="card-header bg-primary text-white">
+         <div class="card-header bg-success text-white">
             <h6 class="pt-2"><i class="fas fa-chart-bar"></i> Stok Barang</h6>
          </div>
          <div class="card-body">
@@ -60,7 +60,7 @@ if ($r > 0) {
    <!-- STATUS cardS -->
    <div class="col-md-3 mb-3">
       <div class="card">
-         <div class="card-header bg-primary text-white">
+         <div class="card-header bg-success text-white">
             <h6 class="pt-2"><i class="fas fa-upload"></i> Telah Terjual</h6>
          </div>
          <div class="card-body">
@@ -77,7 +77,7 @@ if ($r > 0) {
    </div><!-- /col-md-3-->
    <div class="col-md-3 mb-3">
       <div class="card">
-         <div class="card-header bg-primary text-white">
+         <div class="card-header bg-success text-white">
             <h6 class="pt-2"><i class="fa fa-bookmark"></i> Kategori Barang</h6>
          </div>
          <div class="card-body">
