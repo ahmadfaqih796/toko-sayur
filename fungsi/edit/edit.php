@@ -62,6 +62,16 @@ if (!empty($_SESSION['admin'])) {
     }
 
     if (!empty($_GET['barang'])) {
+        $dir = '../../assets/img/barang/';
+        $tmp_name = $_FILES['foto']['tmp_name'];
+        $gambar = time() . basename($_FILES['foto']['name']);
+        move_uploaded_file($tmp_name, $dir . $gambar);
+
+        //post gambar lama
+        $foto2 = $_POST['foto2'];
+        //remove gambar di direktori
+        unlink('../../assets/img/barang/' . $foto2 . '');
+
         $id = htmlentities($_POST['id']);
         $kategori = htmlentities($_POST['kategori']);
         $nama = htmlentities($_POST['nama']);
@@ -79,10 +89,11 @@ if (!empty($_SESSION['admin'])) {
         $data[] = $jual;
         $data[] = $satuan;
         $data[] = $stok;
+        $data[] = $gambar;
         $data[] = $tgl;
         $data[] = $id;
         $sql = 'UPDATE barang SET id_kategori=?, nama_barang=?, merk=?, 
-				harga_beli=?, harga_jual=?, id_satuan=?, stok=?, tgl_update=?  WHERE id_barang=?';
+				harga_beli=?, harga_jual=?, id_satuan=?, stok=?, gambar=?, tgl_update=?  WHERE id_barang=?';
         $row = $config->prepare($sql);
         $row->execute($data);
         echo '<script>window.location="../../index.php?page=barang/edit&barang=' . $id . '&success=edit-data"</script>';

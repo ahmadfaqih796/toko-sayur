@@ -23,7 +23,7 @@
  <div class="card card-body">
  	<div class="table-responsive">
  		<table class="table table-striped">
- 			<form action="fungsi/edit/edit.php?barang=edit" method="POST">
+ 			<form action="fungsi/edit/edit.php?barang=edit" method="POST" enctype="multipart/form-data">
  				<tr>
  					<td>ID Barang</td>
  					<td><input type="text" readonly="readonly" class="form-control" value="<?php echo $hasil['id_barang']; ?>" name="id"></td>
@@ -81,6 +81,13 @@
  				<tr>
  					<td>Stok</td>
  					<td><input type="number" class="form-control" value="<?php echo $hasil['stok']; ?>" name="stok"></td>
+ 				</tr>
+ 				<tr>
+ 					<td>Gambar</td>
+ 					<td>
+ 						<input type="file" class="form-control" accept="image/*" name="foto">
+ 						<input type="hidden" value="<?php echo $hasil['gambar']; ?>" name="foto2">
+ 					</td>
  				</tr>
  				<tr>
  					<td>Tanggal Update</td>
