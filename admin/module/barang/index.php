@@ -85,8 +85,15 @@
                                 <td class="align-middle">Rp.<?php echo number_format($isi['harga_beli']); ?>,-</td>
                                 <td class="align-middle">Rp.<?php echo number_format($isi['harga_jual']); ?>,-</td>
                                 <td class="align-middle"> <?php echo $isi['nama_satuan']; ?></td>
-                                <td class="align-middle">
-                                    <img src="/assets/img/barang/<?php echo $isi['gambar']; ?>" class="rounded mx-auto d-block" style="width: 60%; height: 100px; object-fit: contain;" alt="image desc">
+                                <td class="align-middle text-center">
+                                    <?php
+                                    if ($isi['gambar']) { ?>
+                                        <img src="/assets/img/barang/<?php echo $isi['gambar']; ?>" class="rounded mx-auto d-block" style="width: 60%; height: 100px; object-fit: contain;" alt="image desc">
+                                    <?php
+                                    } else {
+                                        echo "belum upload";
+                                    }
+                                    ?>
                                 </td>
                                 <td class="align-middle">
                                     <?php if ($isi['stok'] <=  '3') { ?>
