@@ -53,6 +53,7 @@
                             <th>Harga Beli</th>
                             <th>Harga Jual</th>
                             <th>Satuan</th>
+                            <th>Gambar</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -70,21 +71,24 @@
                         foreach ($hasil as $isi) {
                         ?>
                             <tr>
-                                <td><?php echo $no; ?></td>
-                                <td><?php echo $isi['id_barang']; ?></td>
-                                <td><?php echo $isi['nama_kategori']; ?></td>
-                                <td><?php echo $isi['nama_barang']; ?></td>
-                                <td>
+                                <td class="align-middle"><?php echo $no; ?></td>
+                                <td class="align-middle"><?php echo $isi['id_barang']; ?></td>
+                                <td class="align-middle"><?php echo $isi['nama_kategori']; ?></td>
+                                <td class="align-middle"><?php echo $isi['nama_barang']; ?></td>
+                                <td class="align-middle">
                                     <?php if ($isi['stok'] == '0') { ?>
                                         <button class="btn btn-danger"> Habis</button>
                                     <?php } else { ?>
                                         <?php echo $isi['stok']; ?>
                                     <?php } ?>
                                 </td>
-                                <td>Rp.<?php echo number_format($isi['harga_beli']); ?>,-</td>
-                                <td>Rp.<?php echo number_format($isi['harga_jual']); ?>,-</td>
-                                <td> <?php echo $isi['nama_satuan']; ?></td>
-                                <td>
+                                <td class="align-middle">Rp.<?php echo number_format($isi['harga_beli']); ?>,-</td>
+                                <td class="align-middle">Rp.<?php echo number_format($isi['harga_jual']); ?>,-</td>
+                                <td class="align-middle"> <?php echo $isi['nama_satuan']; ?></td>
+                                <td class="align-middle">
+                                    <img src="/assets/img/barang/<?php echo $isi['gambar']; ?>" class="rounded mx-auto d-block" style="width: 60%; height: 100px; object-fit: contain;" alt="image desc">
+                                </td>
+                                <td class="align-middle">
                                     <?php if ($isi['stok'] <=  '3') { ?>
                                         <form method="POST" action="fungsi/edit/edit.php?stok=edit">
                                             <input type="text" name="restok" class="form-control">
@@ -96,10 +100,13 @@
                                                 <button class="btn btn-danger btn-sm">Hapus</button></a>
                                         </form>
                                     <?php } else { ?>
-                                        <a href="index.php?page=barang/details&barang=<?php echo $isi['id_barang']; ?>"><button class="btn btn-primary btn-xs">Details</button></a>
-
-                                        <a href="index.php?page=barang/edit&barang=<?php echo $isi['id_barang']; ?>"><button class="btn btn-warning btn-xs">Edit</button></a>
-                                        <a href="fungsi/hapus/hapus.php?barang=hapus&id=<?php echo $isi['id_barang']; ?>" onclick="javascript:return confirm('Hapus Data barang ?');"><button class="btn btn-danger btn-xs">Hapus</button></a>
+                                        <section style="display: flex; justify-content: space-around;">
+                                            <a href="index.php?page=barang/details&barang=<?php echo $isi['id_barang']; ?>"><button class="btn btn-primary btn-xs">Details</button></a>
+                                            <a href="index.php?page=barang/edit&barang=<?php echo $isi['id_barang']; ?>" style="margin-left: 10px; margin-right: 10px;">
+                                                <button class="btn btn-warning btn-xs">Edit</button>
+                                            </a>
+                                            <a href="fungsi/hapus/hapus.php?barang=hapus&id=<?php echo $isi['id_barang']; ?>" onclick="javascript:return confirm('Hapus Data barang ?');"><button class="btn btn-danger btn-xs">Hapus</button></a>
+                                        </section>
                                     <?php } ?>
                             </tr>
                         <?php
@@ -135,8 +142,8 @@
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
                     <form action="fungsi/tambah/tambah.php?barang=tambah" method="POST" enctype="multipart/form-data">
-                        <div class="modal-body">
-                            <table class="table table-striped bordered">
+                        <div class="modal-body ">
+                            <table class="table table-striped bordered ">
                                 <?php
                                 $format = $lihat->barang_id();
                                 ?>
