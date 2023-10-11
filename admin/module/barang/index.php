@@ -134,7 +134,7 @@
                         <h5 class="modal-title"><i class="fa fa-plus"></i> Tambah Barang</h5>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
-                    <form action="fungsi/tambah/tambah.php?barang=tambah" method="POST">
+                    <form action="fungsi/tambah/tambah.php?barang=tambah" method="POST" enctype="multipart/form-data">
                         <div class="modal-body">
                             <table class="table table-striped bordered">
                                 <?php
@@ -196,6 +196,11 @@
                                     <td>Stok</td>
                                     <td><input type="number" required Placeholder="Stok" class="form-control" name="stok"></td>
                                 </tr>
+                                <tr>
+                                    <td>Gambar</td>
+                                    <td><input type="file" accept="image/*" name="foto"></td>
+                                </tr>
+
                                 <tr>
                                     <td>Tanggal Input</td>
                                     <td><input type="text" required readonly="readonly" class="form-control" value="<?php echo  date("j F Y, G:i"); ?>" name="tgl"></td>

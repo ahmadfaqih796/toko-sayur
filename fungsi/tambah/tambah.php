@@ -26,6 +26,11 @@ if (!empty($_SESSION['admin'])) {
     }
 
     if (!empty($_GET['barang'])) {
+        $dir = '../../assets/img/barang/';
+        $tmp_name = $_FILES['foto']['tmp_name'];
+        $gambar = time() . basename($_FILES['foto']['name']);
+        move_uploaded_file($tmp_name, $dir . $gambar);
+
         $id = htmlentities($_POST['id']);
         $kategori = htmlentities($_POST['kategori']);
         $nama = htmlentities($_POST['nama']);
@@ -44,9 +49,10 @@ if (!empty($_SESSION['admin'])) {
         $data[] = $jual;
         $data[] = $satuan;
         $data[] = $stok;
+        $data[] = $gambar;
         $data[] = $tgl;
-        $sql = 'INSERT INTO barang (id_barang,id_kategori,nama_barang,merk,harga_beli,harga_jual,id_satuan,stok,tgl_input) 
-			    VALUES (?,?,?,?,?,?,?,?,?) ';
+        $sql = 'INSERT INTO barang (id_barang,id_kategori,nama_barang,merk,harga_beli,harga_jual,id_satuan,stok,gambar,tgl_input) 
+			    VALUES (?,?,?,?,?,?,?,?,?,?) ';
         $row = $config->prepare($sql);
         $row->execute($data);
         echo '<script>window.location="../../index.php?page=barang&success=tambah-data"</script>';
