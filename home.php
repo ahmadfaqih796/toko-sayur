@@ -14,7 +14,7 @@ $barang = $lihat->barang_limit(3);
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
    <meta name="description" content="" />
    <meta name="author" content="" />
-   <title>Freelancer - Start Bootstrap Theme</title>
+   <title>Toko Sayur Siti</title>
    <!-- Favicon-->
    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
    <!-- Font Awesome icons (free version)-->
@@ -30,27 +30,28 @@ $barang = $lihat->barang_limit(3);
    <!-- Navigation-->
    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
       <div class="container">
-         <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
+         <a class="navbar-brand" href="#page-top">Toko Sayur</a>
          <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
             <i class="fas fa-bars"></i>
          </button>
          <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
-               <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portfolio</a></li>
+               <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#list">List</a></li>
                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
-               <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>
+               <!-- <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li> -->
             </ul>
          </div>
       </div>
    </nav>
    <!-- Masthead-->
-   <header class="masthead bg-primary text-white text-center">
+   <header class="masthead bg-primary text-white text-center" style="height: 100vh;">
       <div class="container d-flex align-items-center flex-column">
          <!-- Masthead Avatar Image-->
-         <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." />
+         <!-- <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." /> -->
+         <i class="fa fa-leaf" aria-hidden="true" style="font-size: 200px; margin-bottom: 20px;"></i>
          <!-- Masthead Heading-->
-         <h1 class="masthead-heading text-uppercase mb-0">Start Bootstrap</h1>
+         <h1 class="masthead-heading text-uppercase mb-0">Toko Sayur</h1>
          <!-- Icon Divider-->
          <div class="divider-custom divider-light">
             <div class="divider-custom-line"></div>
@@ -58,14 +59,14 @@ $barang = $lihat->barang_limit(3);
             <div class="divider-custom-line"></div>
          </div>
          <!-- Masthead Subheading-->
-         <p class="masthead-subheading font-weight-light mb-0">Graphic Artist - Web Designer - Illustrator</p>
+         <p class="masthead-subheading font-weight-light mb-0">Segar & Berkualitas</p>
       </div>
    </header>
    <!-- Portfolio Section-->
-   <section class="page-section portfolio" id="portfolio">
+   <section class="page-section portfolio" id="list">
       <div class="container">
          <!-- Portfolio Section Heading-->
-         <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Barang Stok</h2>
+         <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Barang List</h2>
          <!-- Icon Divider-->
          <div class="divider-custom">
             <div class="divider-custom-line"></div>
@@ -81,7 +82,7 @@ $barang = $lihat->barang_limit(3);
                <div class="col-md-6 col-lg-4 mb-5">
                   <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target='#portfolioModal<?= $isi['id'] ?>'>
                      <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        <div class="portfolio-item-caption-content text-center text-white"><?= $isi['nama_barang']; ?></div>
                      </div>
                      <div class="text-center">
                         <img class="img-fluid" src="assets/img/barang/<?php echo $isi['gambar']; ?>" alt="<?= $isi['gambar']; ?>" style="width: 100%; height: 200px; object-fit: contain;" />
@@ -106,97 +107,28 @@ $barang = $lihat->barang_limit(3);
             <div class="divider-custom-line"></div>
          </div>
          <!-- About Section Content-->
-         <div class="row">
+         <div class="row" style="text-align: justify;">
             <div class="col-lg-4 ms-auto">
-               <p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p>
+               <p class="lead">Toko Sayur Siti adalah tempat yang penuh keberagaman dan kualitas dalam pelayanan produk-produk segar dan sehat. Terletak di pusat kota yang mudah dijangkau oleh warga sekitar, toko ini telah menjadi tujuan utama bagi para pencinta sayuran yang peduli akan kualitas dan keberlanjutan.</p>
             </div>
             <div class="col-lg-4 me-auto">
-               <p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p>
+               <p class="lead">Toko Sayur Siti menawarkan beragam jenis sayuran segar, mulai dari sayuran hijau yang renyah seperti bayam, kangkung, dan selada hingga sayuran akar seperti wortel, kentang, dan ubi. Produk-produknya selalu segar dan bermutu tinggi, karena Siti bekerja sama dengan petani lokal terpercaya untuk memastikan kualitas terbaik.</p>
             </div>
+            <div class="col-lg-4 me-auto">
+               <p class="lead">Selain sayuran, toko ini juga menyediakan berbagai buah-buahan segar, ramuan tradisional, dan produk-produk organik untuk memenuhi kebutuhan kesehatan pelanggan. Siti sangat memperhatikan aspek keberlanjutan, sehingga Anda dapat yakin bahwa produk yang Anda beli di toko ini ramah lingkungan.</p>
+            </div>
+
          </div>
          <!-- About Section Button-->
-         <div class="text-center mt-4">
+         <!-- <div class="text-center mt-4">
             <a class="btn btn-xl btn-outline-light" href="https://startbootstrap.com/theme/freelancer/">
                <i class="fas fa-download me-2"></i>
                Free Download!
             </a>
-         </div>
+         </div> -->
       </div>
    </section>
 
-   <!-- Contact Section-->
-   <section class="page-section" id="contact">
-      <div class="container">
-         <!-- Contact Section Heading-->
-         <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
-         <!-- Icon Divider-->
-         <div class="divider-custom">
-            <div class="divider-custom-line"></div>
-            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-            <div class="divider-custom-line"></div>
-         </div>
-         <!-- Contact Section Form-->
-         <div class="row justify-content-center">
-            <div class="col-lg-8 col-xl-7">
-               <!-- * * * * * * * * * * * * * * *-->
-               <!-- * * SB Forms Contact Form * *-->
-               <!-- * * * * * * * * * * * * * * *-->
-               <!-- This form is pre-integrated with SB Forms.-->
-               <!-- To make this form functional, sign up at-->
-               <!-- https://startbootstrap.com/solution/contact-forms-->
-               <!-- to get an API token!-->
-               <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                  <!-- Name input-->
-                  <div class="form-floating mb-3">
-                     <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                     <label for="name">Full name</label>
-                     <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                  </div>
-                  <!-- Email address input-->
-                  <div class="form-floating mb-3">
-                     <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
-                     <label for="email">Email address</label>
-                     <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                     <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                  </div>
-                  <!-- Phone number input-->
-                  <div class="form-floating mb-3">
-                     <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-                     <label for="phone">Phone number</label>
-                     <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
-                  </div>
-                  <!-- Message input-->
-                  <div class="form-floating mb-3">
-                     <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
-                     <label for="message">Message</label>
-                     <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
-                  </div>
-                  <!-- Submit success message-->
-                  <!---->
-                  <!-- This is what your users will see when the form-->
-                  <!-- has successfully submitted-->
-                  <div class="d-none" id="submitSuccessMessage">
-                     <div class="text-center mb-3">
-                        <div class="fw-bolder">Form submission successful!</div>
-                        To activate this form, sign up at
-                        <br />
-                        <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                     </div>
-                  </div>
-                  <!-- Submit error message-->
-                  <!---->
-                  <!-- This is what your users will see when there is-->
-                  <!-- an error submitting the form-->
-                  <div class="d-none" id="submitErrorMessage">
-                     <div class="text-center text-danger mb-3">Error sending message!</div>
-                  </div>
-                  <!-- Submit Button-->
-                  <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Send</button>
-               </form>
-            </div>
-         </div>
-      </div>
-   </section>
    <!-- Footer-->
    <footer class="footer text-center">
       <div class="container">
@@ -205,9 +137,9 @@ $barang = $lihat->barang_limit(3);
             <div class="col-lg-4 mb-5 mb-lg-0">
                <h4 class="text-uppercase mb-4">Location</h4>
                <p class="lead mb-0">
-                  2215 John Daniel Drive
+                  Jl. Pramuka RT.003/003
                   <br />
-                  Clark, MO 65243
+                  Bekasi, Jawa Barat 65243
                </p>
             </div>
             <!-- Footer Social Icons-->
@@ -220,10 +152,10 @@ $barang = $lihat->barang_limit(3);
             </div>
             <!-- Footer About Text-->
             <div class="col-lg-4">
-               <h4 class="text-uppercase mb-4">About Freelancer</h4>
+               <h4 class="text-uppercase mb-4">Call Center</h4>
                <p class="lead mb-0">
-                  Freelance is a free to use, MIT licensed Bootstrap theme created by
-                  <a href="http://startbootstrap.com">Start Bootstrap</a>
+                  <i class="fab fa fa-phone"></i>+62 821 8293 1302
+                  <!-- <a href="http://startbootstrap.com">Start Bootstrap</a> -->
                   .
                </p>
             </div>
@@ -232,7 +164,7 @@ $barang = $lihat->barang_limit(3);
    </footer>
    <!-- Copyright Section-->
    <div class="copyright py-4 text-center text-white">
-      <div class="container"><small>Copyright &copy; Your Website 2023</small></div>
+      <div class="container"><small>Copyright &copy; Toko Sayur 2023</small></div>
    </div>
    <!-- Portfolio Modals-->
    <!-- Portfolio Modal 1-->
@@ -256,7 +188,7 @@ $barang = $lihat->barang_limit(3);
                               <div class="divider-custom-line"></div>
                            </div>
                            <!-- Portfolio Modal - Image-->
-                           <img class="img-fluid rounded mb-5" src="assets/img/barang/<?= $isi['gambar'] ?>" alt="..." />
+                           <img class="img-fluid rounded mb-5" src="assets/img/barang/<?= $isi['gambar'] ?>" alt="..." style="width: 100%; height: 300px; object-fit: contain;" />
                            <!-- Portfolio Modal - Text-->
                            <div class="card card-body">
                               <div class="table-responsive">
@@ -288,8 +220,7 @@ $barang = $lihat->barang_limit(3);
                                  </table>
                               </div>
                            </div>
-                           <p class="mb-4"><?= $isi['id'] ?></p>
-                           <button class="btn btn-primary" data-bs-dismiss="modal">
+                           <button class="btn btn-primary mt-3" data-bs-dismiss="modal">
                               <i class="fas fa-xmark fa-fw"></i>
                               Close Window
                            </button>
