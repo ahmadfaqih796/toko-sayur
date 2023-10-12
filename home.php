@@ -3,7 +3,7 @@ require 'config.php';
 include $view;
 $lihat = new view($config);
 $barang = $lihat->barang_limit(3);
-
+// $barang = $lihat->barang();
 ?>
 
 <!DOCTYPE html>
@@ -84,7 +84,7 @@ $barang = $lihat->barang_limit(3);
                         <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                      </div>
                      <div class="text-center">
-                        <img class="img-fluid " src="assets/img/barang/<?php echo $isi['gambar']; ?>" alt="<?= $isi['gambar']; ?>" />
+                        <img class="img-fluid" src="assets/img/barang/<?php echo $isi['gambar']; ?>" alt="<?= $isi['gambar']; ?>" style="width: 100%; height: 200px; object-fit: contain;" />
                      </div>
                   </div>
                </div>
@@ -258,6 +258,36 @@ $barang = $lihat->barang_limit(3);
                            <!-- Portfolio Modal - Image-->
                            <img class="img-fluid rounded mb-5" src="assets/img/barang/<?= $isi['gambar'] ?>" alt="..." />
                            <!-- Portfolio Modal - Text-->
+                           <div class="card card-body">
+                              <div class="table-responsive">
+                                 <table class="table table-bordered table-striped table-sm" id="example2">
+
+                                    <tbody>
+                                       <tr>
+                                          <th>Nama Barang</th>
+                                          <td><?php echo $isi['nama_barang']; ?></td>
+                                       </tr>
+                                       <tr>
+                                          <th>Kategori</th>
+                                          <td><?php echo $isi['nama_kategori']; ?></td>
+                                       </tr>
+                                       <tr>
+                                          <th>Satuan</th>
+                                          <td><?php echo $isi['nama_satuan']; ?></td>
+                                       </tr>
+                                       <tr>
+                                          <th>Harga</th>
+                                          <td>Rp.<?php echo number_format($isi['harga_jual']); ?>,-</td>
+                                       </tr>
+                                       <tr>
+                                          <th>Stok</th>
+                                          <td><?php echo $isi['stok']; ?></td>
+                                       </tr>
+                                    </tbody>
+
+                                 </table>
+                              </div>
+                           </div>
                            <p class="mb-4"><?= $isi['id'] ?></p>
                            <button class="btn btn-primary" data-bs-dismiss="modal">
                               <i class="fas fa-xmark fa-fw"></i>
