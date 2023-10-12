@@ -70,6 +70,18 @@ class view
         return $hasil;
     }
 
+    public function barang_limit($limit)
+    {
+        $sql = "select barang.*, kategori.id_kategori, kategori.nama_kategori, satuan.nama_satuan
+        from barang inner join kategori on barang.id_kategori = kategori.id_kategori 
+        LEFT JOIN satuan on barang.id_satuan = satuan.id_satuan
+        ORDER BY id DESC LIMIT " . $limit;
+        $row = $this->db->prepare($sql);
+        $row->execute();
+        $hasil = $row->fetchAll();
+        return $hasil;
+    }
+
     public function barang_stok()
     {
         $sql = "select barang.*, kategori.id_kategori, kategori.nama_kategori, satuan.nama_satuan
@@ -147,7 +159,7 @@ class view
 
     public function barang_row()
     {
-        $sql = "select*from barang";
+        $sql = "SELECT * FROM barang";
         $row = $this->db->prepare($sql);
         $row->execute();
         $hasil = $row->rowCount();
