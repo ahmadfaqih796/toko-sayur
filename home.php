@@ -16,7 +16,7 @@ $barang = $lihat->barang_limit(3);
    <meta name="author" content="" />
    <title>Toko Sayur Siti</title>
    <!-- Favicon-->
-   <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+   <link rel="icon" type="image/x-icon" href="assets/img/icon.png" />
    <!-- Font Awesome icons (free version)-->
    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
    <!-- Google fonts-->
