@@ -2,8 +2,8 @@
 require 'config.php';
 include $view;
 $lihat = new view($config);
-$barang = $lihat->barang_limit(3);
-// $barang = $lihat->barang();
+// $barang = $lihat->barang_limit(3);
+$barang = $lihat->barang();
 ?>
 
 <!DOCTYPE html>
