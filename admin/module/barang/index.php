@@ -88,7 +88,7 @@
                                 <td class="align-middle text-center">
                                     <?php
                                     if ($isi['gambar']) { ?>
-                                        <img src="/assets/img/barang/<?php echo $isi['gambar']; ?>" class="rounded mx-auto d-block" style="width: 60%; height: 100px; object-fit: contain;" alt="image desc">
+                                        <img src="assets/img/barang/<?php echo $isi['gambar']; ?>" class="rounded mx-auto d-block" style="width: 60%; height: 100px; object-fit: contain;" alt="image descsasa">
                                     <?php
                                     } else {
                                         echo "belum upload";
