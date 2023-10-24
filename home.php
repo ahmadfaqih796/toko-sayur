@@ -140,9 +140,7 @@ $toko = $lihat->toko();
             <div class="col-lg-4 mb-5 mb-lg-0">
                <h4 class="text-uppercase mb-4">Location</h4>
                <p class="lead mb-0">
-                  Jl. Pramuka RT.003/003
-                  <br />
-                  Bekasi, Jawa Barat 65243
+                  <?= $toko['alamat_toko']; ?>
                </p>
             </div>
             <!-- Footer Social Icons-->
