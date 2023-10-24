@@ -137,25 +137,28 @@ $toko = $lihat->toko();
       <div class="container">
          <div class="row">
             <!-- Footer Location-->
-            <div class="col-lg-4 mb-5 mb-lg-0">
+            <div class="col-lg-6 mb-5 mb-lg-0">
                <h4 class="text-uppercase mb-4">Location</h4>
                <p class="lead mb-0">
                   <?= $toko['alamat_toko']; ?>
                </p>
             </div>
             <!-- Footer Social Icons-->
-            <div class="col-lg-4 mb-5 mb-lg-0">
+            <!-- <div class="col-lg-6 mb-5 mb-lg-0">
                <h4 class="text-uppercase mb-4">Around the Web</h4>
                <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
                <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
                <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
                <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
-            </div>
+            </div> -->
             <!-- Footer About Text-->
-            <div class="col-lg-4">
+            <div class="col-lg-6">
                <h4 class="text-uppercase mb-4">Call Center</h4>
                <p class="lead mb-0">
-                  <i class="fab fa fa-phone me-3"></i><?= $toko['tlp']; ?>
+                  <i class="fab fa fa-phone me-3"></i>
+                  <a href="https://api.whatsapp.com/send?phone=<?= $toko['tlp']; ?>">
+                     <?= $toko['tlp']; ?>
+                  </a>
                   <!-- <a href="http://startbootstrap.com">Start Bootstrap</a> -->
                </p>
             </div>
