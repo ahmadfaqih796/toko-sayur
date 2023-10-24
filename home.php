@@ -118,7 +118,7 @@ $toko = $lihat->toko();
                <p class="lead">Toko <?= $toko['nama_toko']; ?> menawarkan beragam jenis sayuran segar, mulai dari sayuran hijau yang renyah seperti bayam, kangkung, dan selada hingga sayuran akar seperti wortel, kentang, dan ubi. Produk-produknya selalu segar dan bermutu tinggi, karena <?= $toko['nama_toko']; ?> bekerja sama dengan petani lokal terpercaya untuk memastikan kualitas terbaik.</p>
             </div>
             <div class="col-lg-4 me-auto">
-               <p class="lead">Selain sayuran, toko ini juga menyediakan berbagai buah-buahan segar, ramuan tradisional, dan produk-produk organik untuk memenuhi kebutuhan kesehatan pelanggan. <?= $toko['nama_toko']; ?> sangat memperhatikan aspek keberlanjutan, sehingga Anda dapat yakin bahwa produk yang Anda beli di toko ini ramah lingkungan.</p>
+               <p class="lead">Selain sayuran, toko ini juga menyediakan berbagai buah-buahan dan sayur-sayuran yang segar untuk memenuhi kebutuhan kesehatan pelanggan. <?= $toko['nama_toko']; ?> sangat memperhatikan aspek keberlanjutan, sehingga Anda dapat yakin bahwa produk yang Anda beli di toko ini ramah lingkungan.</p>
             </div>
 
          </div>
