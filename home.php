@@ -155,9 +155,8 @@ $toko = $lihat->toko();
             <div class="col-lg-4">
                <h4 class="text-uppercase mb-4">Call Center</h4>
                <p class="lead mb-0">
-                  <i class="fab fa fa-phone"></i>+62 821 8293 1302
+                  <i class="fab fa fa-phone me-3"></i><?= $toko['tlp']; ?>
                   <!-- <a href="http://startbootstrap.com">Start Bootstrap</a> -->
-                  .
                </p>
             </div>
          </div>
