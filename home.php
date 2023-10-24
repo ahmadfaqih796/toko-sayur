@@ -4,6 +4,7 @@ include $view;
 $lihat = new view($config);
 // $barang = $lihat->barang_limit(3);
 $barang = $lihat->barang();
+$toko = $lihat->toko();
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +15,7 @@ $barang = $lihat->barang();
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
    <meta name="description" content="" />
    <meta name="author" content="" />
-   <title>Toko Sayur Siti</title>
+   <title>Toko <?= $toko['nama_toko']; ?></title>
    <!-- Favicon-->
    <link rel="icon" type="image/x-icon" href="assets/img/icon.png" />
    <!-- Font Awesome icons (free version)-->
@@ -30,7 +31,7 @@ $barang = $lihat->barang();
    <!-- Navigation-->
    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
       <div class="container">
-         <a class="navbar-brand" href="#page-top">Toko Sayur</a>
+         <a class="navbar-brand" href="#page-top"><?= $toko['nama_toko']; ?></a>
          <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
             <i class="fas fa-bars"></i>
@@ -51,7 +52,9 @@ $barang = $lihat->barang();
          <!-- <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." /> -->
          <i class="fa fa-leaf" aria-hidden="true" style="font-size: 200px; margin-bottom: 20px;"></i>
          <!-- Masthead Heading-->
-         <h1 class="masthead-heading text-uppercase mb-0">Toko Sayur</h1>
+         <h1 class="masthead-heading text-uppercase mb-0">
+            <?= $toko['nama_toko']; ?>
+         </h1>
          <!-- Icon Divider-->
          <div class="divider-custom divider-light">
             <div class="divider-custom-line"></div>
@@ -109,13 +112,13 @@ $barang = $lihat->barang();
          <!-- About Section Content-->
          <div class="row" style="text-align: justify;">
             <div class="col-lg-4 ms-auto">
-               <p class="lead">Toko Sayur Siti adalah tempat yang penuh keberagaman dan kualitas dalam pelayanan produk-produk segar dan sehat. Terletak di pusat kota yang mudah dijangkau oleh warga sekitar, toko ini telah menjadi tujuan utama bagi para pencinta sayuran yang peduli akan kualitas dan keberlanjutan.</p>
+               <p class="lead">Toko <?= $toko['nama_toko']; ?> adalah tempat yang penuh keberagaman dan kualitas dalam pelayanan produk-produk segar dan sehat. Terletak di pusat kota yang mudah dijangkau oleh warga sekitar, toko ini telah menjadi tujuan utama bagi para pencinta sayuran yang peduli akan kualitas dan keberlanjutan.</p>
             </div>
             <div class="col-lg-4 me-auto">
-               <p class="lead">Toko Sayur Siti menawarkan beragam jenis sayuran segar, mulai dari sayuran hijau yang renyah seperti bayam, kangkung, dan selada hingga sayuran akar seperti wortel, kentang, dan ubi. Produk-produknya selalu segar dan bermutu tinggi, karena Siti bekerja sama dengan petani lokal terpercaya untuk memastikan kualitas terbaik.</p>
+               <p class="lead">Toko <?= $toko['nama_toko']; ?> menawarkan beragam jenis sayuran segar, mulai dari sayuran hijau yang renyah seperti bayam, kangkung, dan selada hingga sayuran akar seperti wortel, kentang, dan ubi. Produk-produknya selalu segar dan bermutu tinggi, karena <?= $toko['nama_toko']; ?> bekerja sama dengan petani lokal terpercaya untuk memastikan kualitas terbaik.</p>
             </div>
             <div class="col-lg-4 me-auto">
-               <p class="lead">Selain sayuran, toko ini juga menyediakan berbagai buah-buahan segar, ramuan tradisional, dan produk-produk organik untuk memenuhi kebutuhan kesehatan pelanggan. Siti sangat memperhatikan aspek keberlanjutan, sehingga Anda dapat yakin bahwa produk yang Anda beli di toko ini ramah lingkungan.</p>
+               <p class="lead">Selain sayuran, toko ini juga menyediakan berbagai buah-buahan segar, ramuan tradisional, dan produk-produk organik untuk memenuhi kebutuhan kesehatan pelanggan. <?= $toko['nama_toko']; ?> sangat memperhatikan aspek keberlanjutan, sehingga Anda dapat yakin bahwa produk yang Anda beli di toko ini ramah lingkungan.</p>
             </div>
 
          </div>
