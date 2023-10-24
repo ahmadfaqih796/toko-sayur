@@ -45,8 +45,8 @@ $barang = $lihat->barang();
       </div>
    </nav>
    <!-- Masthead-->
-   <header class="masthead bg-primary text-white text-center" style="height: 100vh;">
-      <div class="container d-flex align-items-center flex-column">
+   <header class="masthead bg-primary text-white text-center" style="height: 100vh; background-image: url('assets//img/sayur.jpg'); background-size: cover; ">
+      <div class="overlay">
          <!-- Masthead Avatar Image-->
          <!-- <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." /> -->
          <i class="fa fa-leaf" aria-hidden="true" style="font-size: 200px; margin-bottom: 20px;"></i>
