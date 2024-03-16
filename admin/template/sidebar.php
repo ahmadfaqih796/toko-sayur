@@ -11,7 +11,7 @@ $hasil_profil = $lihat->member_edit($id);
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-leaf"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">Toko Sayur<sup></sup></div>
+        <div class="sidebar-brand-text mx-3">Toko Harly<sup></sup></div>
     </a>
 
     <!-- Divider -->

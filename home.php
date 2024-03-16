@@ -167,7 +167,7 @@ $toko = $lihat->toko();
    </footer>
    <!-- Copyright Section-->
    <div class="copyright py-4 text-center text-white">
-      <div class="container"><small>Copyright &copy; Toko Sayur 2023</small></div>
+      <div class="container"><small>Copyright &copy; Toko Harly 2023</small></div>
    </div>
    <!-- Portfolio Modals-->
    <!-- Portfolio Modal 1-->
