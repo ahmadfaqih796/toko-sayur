@@ -98,13 +98,13 @@
                                 <td class="align-middle">
                                     <?php if ($isi['stok'] <=  '3') { ?>
                                         <form method="POST" action="fungsi/edit/edit.php?stok=edit">
-                                            <input type="text" name="restok" class="form-control">
+                                            <input type="number" name="restok" class="form-control">
                                             <input type="hidden" name="id" value="<?php echo $isi['id_barang']; ?>" class="form-control">
                                             <button class="btn btn-primary btn-sm">
                                                 Restok
                                             </button>
-                                            <a href="fungsi/hapus/hapus.php?barang=hapus&id=<?php echo $isi['id_barang']; ?>" onclick="javascript:return confirm('Hapus Data barang ?');">
-                                                <button class="btn btn-danger btn-sm">Hapus</button></a>
+                                            <!-- <a href="fungsi/hapus/hapus.php?barang=hapus&id=<?php echo $isi['id_barang']; ?>" onclick="javascript:return confirm('Hapus Data barang ?');">
+                                                <button class="btn btn-danger btn-sm">Hapus</button></a> -->
                                         </form>
                                     <?php } else { ?>
                                         <section style="display: flex; justify-content: space-around;">

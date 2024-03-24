@@ -46,7 +46,7 @@ $toko = $lihat->toko();
       </div>
    </nav>
    <!-- Masthead-->
-   <header class="masthead bg-primary text-white text-center" style="height: 100vh; background-image: url('assets//img/sayur.jpg'); background-size: cover; ">
+   <header class="masthead bg-primary text-white text-center" style="height: 100vh;  background-size: cover; ">
       <div class="overlay">
          <!-- Masthead Avatar Image-->
          <!-- <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." /> -->
@@ -112,13 +112,16 @@ $toko = $lihat->toko();
          <!-- About Section Content-->
          <div class="row" style="text-align: justify;">
             <div class="col-lg-4 ms-auto">
-               <p class="lead">Toko <?= $toko['nama_toko']; ?> adalah tempat yang penuh keberagaman dan kualitas dalam pelayanan produk-produk segar dan sehat. Terletak di pusat kota yang mudah dijangkau oleh warga sekitar, toko ini telah menjadi tujuan utama bagi para pencinta sayuran yang peduli akan kualitas dan keberlanjutan.</p>
+               <p class="lead">Selamat datang di Toko Harly, toko serba ada yang menyediakan beragam produk untuk memenuhi berbagai kebutuhan, mulai dari perlengkapan solat, pakaian, peralatan rumah tangga, dan lain sebagainya. Di Toko Harly, kami menawarkan berbagai macam perlengkapan solat. Dari sajadah hingga mukena.</p>
             </div>
             <div class="col-lg-4 me-auto">
-               <p class="lead">Toko <?= $toko['nama_toko']; ?> menawarkan beragam jenis sayuran segar, mulai dari sayuran hijau yang renyah seperti bayam, kangkung, dan selada hingga sayuran akar seperti wortel, kentang, dan ubi. Produk-produknya selalu segar dan bermutu tinggi, karena <?= $toko['nama_toko']; ?> bekerja sama dengan petani lokal terpercaya untuk memastikan kualitas terbaik.</p>
+               <p class="lead">Selain itu, kami juga menawarkan berbagai aksesoris mode untuk pria, wanita, dan anak-anak. Mulai dari jam tangan dan ikat pinggang. Kami juga memiliki koleksi pakaian, Dari formal hingga kasual. Tidak hanya itu, kami juga menyediakan peralatan rumah tangga yang berguna dan fungsional, serta perlengkapan listrik untuk memenuhi kebutuhan sehari-hari di rumah.</p>
             </div>
+            <!-- <?= $toko['nama_toko']; ?> -->
             <div class="col-lg-4 me-auto">
-               <p class="lead">Selain sayuran, toko ini juga menyediakan berbagai buah-buahan dan sayur-sayuran yang segar untuk memenuhi kebutuhan kesehatan pelanggan. <?= $toko['nama_toko']; ?> sangat memperhatikan aspek keberlanjutan, sehingga Anda dapat yakin bahwa produk yang Anda beli di toko ini ramah lingkungan.</p>
+               <p class="lead">
+                  Dari barang pecah belah hingga alat tulis. Kami berkomitmen untuk menyediakan produk dengan harga yang terjangkau, serta pelayanan pelanggan yang ramah dan profesional. Terima kasih telah memilih Toko Harly sebagai mitra belanja Anda. Kami berharap dapat terus melayani Anda dengan baik dan memenuhi semua kebutuhan belanja Anda di masa mendatang.
+               </p>
             </div>
 
          </div>
