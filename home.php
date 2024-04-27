@@ -63,7 +63,7 @@ $toko = $lihat->toko();
          </div>
          <!-- Masthead Subheading-->
          <p class="masthead-subheading font-weight-light mb-0">Semua jenis barang serba Rp.35,000,-</p>
-         <p class="masthead-subheading font-weight-light mb-0" style="font-size: 15px;">Jalan Balai Rakyat No 10 Jakarta Timur</p>
+         <p class="masthead-subheading font-weight-light mb-0" style="font-size: 15px;"><?= $toko['alamat_toko']; ?></p>
       </div>
    </header>
    <!-- Portfolio Section-->
