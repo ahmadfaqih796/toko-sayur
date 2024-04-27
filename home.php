@@ -62,7 +62,7 @@ $toko = $lihat->toko();
             <div class="divider-custom-line"></div>
          </div>
          <!-- Masthead Subheading-->
-         <p class="masthead-subheading font-weight-light mb-0">Segar & Berkualitas</p>
+         <p class="masthead-subheading font-weight-light mb-0">Semua jenis barang serba 35 rb</p>
       </div>
    </header>
    <!-- Portfolio Section-->
