@@ -241,7 +241,7 @@ if (!empty($_SESSION['admin'])) {
                         <td><?php echo $hasil['id_barang']; ?></td>
                         <td><?php echo $hasil['nama_barang']; ?></td>
                         <td><?php echo $hasil['merk']; ?></td>
-                        <td><?php echo $hasil['harga_jual']; ?></td>
+                        <td>Rp. <?php echo number_format($hasil['harga_jual']); ?>,-</td>
                         <td>
                             <a href="fungsi/tambah/tambah.php?jual=jual&id=<?php echo $hasil['id_barang']; ?>&id_kasir=<?php echo $_SESSION['admin']['id_member']; ?>" class="btn btn-success">
                                 <i class="fa fa-shopping-cart"></i></a>
