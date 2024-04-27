@@ -8,7 +8,7 @@
         <div class="container my-auto">
             <div class="copyright text-center my-auto">
                 <span>
-                    <?php echo date('Y'); ?> - Sistem Penjualan Barang Berbasis Web
+                    <?php echo date('Y'); ?> - Sistem Penjualan Barang Berbasis Web - Sitij
                 </span>
             </div>
         </div>
