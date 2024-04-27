@@ -91,6 +91,7 @@ $toko = $lihat->toko();
                         <img class="img-fluid" src="assets/img/barang/<?php echo $isi['gambar']; ?>" alt="<?= $isi['gambar']; ?>" style="width: 100%; height: 200px; object-fit: contain;" />
                      </div>
                   </div>
+                  <h4 class="text-center"><?= $isi['nama_barang']; ?></h4>
                </div>
             <?php
             }
