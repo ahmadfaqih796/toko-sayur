@@ -27,7 +27,7 @@
  				<h5><i class="fa fa-search"></i> Cari Barang</h5>
  			</div>
  			<div class="card-body">
- 				<input type="text" id="cari" class="form-control" name="cari" placeholder="Masukan : Kode / Nama Barang  [ENTER]">
+ 				<input type="text" id="cari" class="form-control" name="cari" placeholder="Masukan : Kode / Nama Barang  [ENTER]" onkeyup="capitalize()">
  			</div>
  		</div>
  	</div>
@@ -202,6 +202,10 @@
 
  	<script>
  		// AJAX call for autocomplete 
+ 		function capitalize() {
+ 			var input = document.getElementById('cari');
+ 			input.value = input.value.toUpperCase();
+ 		}
  		$(document).ready(function() {
  			$("#cari").change(function() {
  				$.ajax({
