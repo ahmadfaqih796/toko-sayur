@@ -173,7 +173,8 @@
  									<td>Bayar </td>
  									<td>
  										<input type="number" class="form-control" name="bayar" value="<?php echo $bayar; ?>">
- 										<input type="number" class="form-control" name="bayar" value="<?php echo $bayar; ?>">
+ 										<!-- <input type="text" class="form-control" name="bayar" onchange="formatCurrency(this)"> -->
+ 										<!-- <input type="text" class="form-control" name="bayar" value="<?= "Rp. " . number_format($bayar) . ",-" ?>"> -->
  									</td>
  									<td><button class="btn btn-success"><i class="fa fa-shopping-cart"></i> Bayar</button>
  										<?php if (!empty($_GET['nota'] == 'yes')) { ?>
@@ -209,6 +210,18 @@
 
 
  	<script>
+ 		function formatCurrency(input) {
+ 			var value = input.value.replace(/[^\d]/g, ''); // Hapus semua karakter non-digit
+ 			var formattedValue = number_format(value, 0, ',', '.'); // Format nilai
+
+ 			// Tambahkan 'Rp.' di depan nilai
+ 			formattedValue = "Rp. " + formattedValue + ",-";
+
+ 			// Update nilai input dengan nilai yang diformat
+ 			input.value = formattedValue;
+ 		}
+
+
  		// AJAX call for autocomplete 
  		function capitalize() {
  			var input = document.getElementById('cari');
