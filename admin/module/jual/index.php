@@ -166,8 +166,10 @@
 									} ?>
  								<tr>
  									<td>Total Semua </td>
- 									<td><input type="number" class="form-control" name="total" value="<?php echo $total_bayar; ?>"></td>
-
+ 									<td>
+ 										<input type="hidden" class="form-control" name="total" value="<?php echo $total_bayar; ?>">
+ 										<input type="text" disabled class="form-control" value="<?= "Rp. " . number_format($total_bayar) . ",-" ?>">
+ 									</td>
  									<td>Bayar </td>
  									<td><input type="number" class="form-control" name="bayar" value="<?php echo $bayar; ?>"></td>
  									<td><button class="btn btn-success"><i class="fa fa-shopping-cart"></i> Bayar</button>
