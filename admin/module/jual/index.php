@@ -171,7 +171,10 @@
  										<input type="text" disabled class="form-control" value="<?= "Rp. " . number_format($total_bayar) . ",-" ?>">
  									</td>
  									<td>Bayar </td>
- 									<td><input type="number" class="form-control" name="bayar" value="<?php echo $bayar; ?>"></td>
+ 									<td>
+ 										<input type="number" class="form-control" name="bayar" value="<?php echo $bayar; ?>">
+ 										<input type="number" class="form-control" name="bayar" value="<?php echo $bayar; ?>">
+ 									</td>
  									<td><button class="btn btn-success"><i class="fa fa-shopping-cart"></i> Bayar</button>
  										<?php if (!empty($_GET['nota'] == 'yes')) { ?>
  											<a class="btn btn-danger" href="fungsi/hapus/hapus.php?penjualan=jual">
@@ -182,7 +185,10 @@
  							<!-- aksi ke table nota -->
  							<tr>
  								<td>Kembali</td>
- 								<td><input type="number" class="form-control" value="<?php echo $hitung; ?>"></td>
+ 								<td>
+ 									<input type="hidden" class="form-control" value="<?php echo $hitung; ?>">
+ 									<input type="text" disabled class="form-control" value="<?= "Rp. " . number_format($hitung) . ",-" ?>">
+ 								</td>
  								<td></td>
  								<td>
  									<a href="print.php?nm_member=<?php echo $_SESSION['admin']['nm_member']; ?>
