@@ -184,21 +184,26 @@
  								</tr>
  							</form>
  							<!-- aksi ke table nota -->
- 							<tr>
- 								<td>Kembali</td>
- 								<td>
- 									<input type="hidden" class="form-control" value="<?php echo $hitung; ?>">
- 									<input type="text" disabled class="form-control" value="<?= "Rp. " . number_format($hitung) . ",-" ?>">
- 								</td>
- 								<td></td>
- 								<td>
- 									<a href="print.php?nm_member=<?php echo $_SESSION['admin']['nm_member']; ?>
-									&bayar=<?php echo $bayar; ?>&kembali=<?php echo $hitung; ?>" target="_blank">
- 										<button class="btn btn-secondary">
- 											<i class="fa fa-print"></i> Print Untuk Bukti Pembayaran
- 										</button></a>
- 								</td>
- 							</tr>
+ 							<?php
+								if ($bayar && $hitung >= 0) {
+								?>
+ 								<tr>
+ 									<td>Kembali</td>
+ 									<td>
+ 										<input type="hidden" class="form-control" value="<?php echo $hitung; ?>">
+ 										<input type="text" disabled class="form-control" value="<?= "Rp. " . number_format($hitung) . ",-" ?>">
+ 									</td>
+ 									<td></td>
+ 									<td>
+ 										<a href="print.php?nm_member=<?php echo $_SESSION['admin']['nm_member']; ?>
+	  &bayar=<?php echo $bayar; ?>&kembali=<?php echo $hitung; ?>" target="_blank">
+ 											<button class="btn btn-secondary">
+ 												<i class="fa fa-print"></i> Print Untuk Bukti Pembayaran
+ 											</button></a>
+ 									</td>
+ 								</tr>
+ 							<?php
+								} ?>
  						</table>
  						<br />
  						<br />
