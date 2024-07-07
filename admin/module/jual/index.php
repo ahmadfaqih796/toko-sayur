@@ -27,7 +27,8 @@
  				<h5><i class="fa fa-search"></i> Cari Barang</h5>
  			</div>
  			<div class="card-body">
- 				<input type="text" id="cari" class="form-control" name="cari" placeholder="Masukan : Kode / Nama Barang  [ENTER]" onkeyup="capitalize()">
+ 				<!-- <input type="text" id="cari" class="form-control" name="cari" placeholder="Masukan : Kode / Nama Barang  [ENTER]" onkeyup="capitalize()"> -->
+ 				<input type="text" id="cari" class="form-control" name="cari" placeholder="Masukan : Kode / Nama Barang  [ENTER]">
  			</div>
  		</div>
  	</div>
