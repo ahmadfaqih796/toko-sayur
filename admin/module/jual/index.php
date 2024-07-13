@@ -12,7 +12,7 @@
  <br>
  <?php if (isset($_GET['success'])) { ?>
  	<div class="alert alert-success">
- 		<p>Edit Data Berhasil !</p>
+ 		<p>Barang telah ditambahkan ke transaksi !</p>
  	</div>
  <?php } ?>
  <?php if (isset($_GET['remove'])) { ?>
