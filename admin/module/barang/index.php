@@ -1,5 +1,13 @@
         <h4>Data Barang</h4>
         <br />
+
+        <?php
+        echo $_GET['error'];
+        if (isset($_GET['error']) == 'validasi') { ?>
+            <div class="alert alert-danger">
+                <p>Nama Barang tidak boleh sama</p>
+            </div>
+        <?php } ?>
         <?php if (isset($_GET['success-stok'])) { ?>
             <div class="alert alert-success">
                 <p>Tambah Stok Berhasil !</p>

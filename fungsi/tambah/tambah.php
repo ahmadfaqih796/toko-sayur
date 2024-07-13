@@ -41,6 +41,16 @@ if (!empty($_SESSION['admin'])) {
         $stok = htmlentities($_POST['stok']);
         $tgl = htmlentities($_POST['tgl']);
 
+        $cek_barang =  ' SELECT * FROM barang WHERE nama_barang = ?';
+        $row = $config->prepare($cek_barang);
+        $row->execute(array($nama));
+        $cek = $row->fetch();
+
+        if (!empty($cek)) {
+            echo '<script>window.location="../../index.php?page=barang&error=validasi"</script>';
+            return;
+        }
+
         $data[] = $id;
         $data[] = $kategori;
         $data[] = $nama;
